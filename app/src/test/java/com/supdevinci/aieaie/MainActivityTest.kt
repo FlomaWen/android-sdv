@@ -1,7 +1,6 @@
 package com.supdevinci.aieaie
 
 import com.supdevinci.aieaie.model.IaModel
-import com.supdevinci.aieaie.viewmodel.MainActivityViewModel
 import org.junit.Test
 
 internal class MainActivityTest {

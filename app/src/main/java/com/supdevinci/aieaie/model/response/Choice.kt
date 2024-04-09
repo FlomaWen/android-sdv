@@ -6,4 +6,6 @@ import com.supdevinci.aieaie.model.OpenAiMessageBody
 data class Choice(
     @SerializedName("message")
     val message: OpenAiMessageBody
-)
+) {
+
+}
