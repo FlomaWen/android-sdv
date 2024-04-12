@@ -28,4 +28,13 @@ interface OpenAiDao {
 
     @Query("DELETE FROM conversations")
     suspend fun deleteAllConversations()
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun createConversation(conversation: ConversationEntity): Long
+
+    @Query("DELETE FROM conversations WHERE id = :conversationId")
+    suspend fun deleteConversationById(conversationId: Int)
+
+    @Query("SELECT * FROM conversations WHERE topic = :topic")
+    fun getConversationsByTopic(topic: String): Flow<List<ConversationEntity>>
 }

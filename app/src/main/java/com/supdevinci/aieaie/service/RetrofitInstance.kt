@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitInstance {
     private const val BASE_URL = "https://api.openai.com/v1/"
 
-    private const val TOKEN = ""
+    private const val TOKEN = "sk-"
 
     private val interceptor = run {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
